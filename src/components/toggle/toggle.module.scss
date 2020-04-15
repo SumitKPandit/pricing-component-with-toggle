@@ -8,6 +8,11 @@
     margin-top: -0.4em;
     display: inline-block;
     border-radius: 2em;
+    &:hover {
+        cursor: pointer;
+        background-image: none;
+        background-color: map-get($neutrals, light);
+    }
     .switch {
         height: 1.7em;
         width: 1.7em;
@@ -16,9 +21,6 @@
         position: relative;
         top: 0.2em;
         transition: left 0.5s;
-    }
-    &:hover {
-        cursor: pointer;
     }
 }
 

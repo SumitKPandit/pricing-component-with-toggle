@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import styles from "./layout.module.scss";
 import Toggle from "../../components/toggle/Toggle";
 import Card from "../../components/card/Card";
+import topImg from "../../images/bg-top.svg";
+import bottomImg from "../../images/bg-bottom.svg";
 
 class Layout extends Component {
     state = {
@@ -43,11 +45,15 @@ class Layout extends Component {
     render() {
         return (
             <div className={styles.layout}>
+                <img src={topImg} alt="background-1" className={styles.bg} />
+                <img src={bottomImg} alt="background-2" className={styles.bg} />
+                <div className={styles.header}>
                 <h1>Our Pricing</h1>
-                <div className={styles.control}>
-                    <p>Annually</p>
-                    <Toggle changePrice={this.togglePriceHandler} status={this.state.monthly} />
-                    <p>Monthly</p>
+                    <div className={styles.control}>
+                        <p>Annually</p>
+                        <Toggle changePrice={this.togglePriceHandler} status={this.state.monthly} />
+                        <p>Monthly</p>
+                    </div>
                 </div>
                 <div className={styles.cards}>
                     {this.state.plans.map((plan, index) => (

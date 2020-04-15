@@ -7,29 +7,60 @@
     padding-top: 4.2em;
     font-size: 1em;
     padding-bottom: 5em;
+    z-index: 0;
+    position: relative;
+    .header {
+        position: relative;
+        z-index: 2;
+    }
+    .cards {
+        position: relative;
+        z-index: 2;
+    }
     .control {
+        position: relative;
         display: flex;
         justify-content: center;
         margin-top: 3em;
         font-size: 1em;
         margin-bottom: 5em;
+        z-index: 2;
     }
     p {
         font-size: 1em;
         color: map-get($neutrals, light);
     }
+    .bg {
+        position: absolute;
+        z-index: 1;
+        width: 50%;
+        @include laptop-and-up {
+            width: 20%;
+        }
+        &:nth-child(1) {
+            right: 0;
+            top: 0;
+        }
+        &:nth-child(2) {
+            left: 0;
+            bottom: 0;
+        }
+    }
     @include laptop-and-up {
         .cards {
+            position: relative;
             display: flex;
             width: 72%;
             margin: 0 auto;
             align-items: center;
             justify-content: center;
+            z-index: 2;
             div {
                 &:nth-child(2) {
+                    position: relative;
                     padding-top: 3em;
                     padding-bottom: 3em;
-                    z-index: 2;
+                    z-index: 3;
                 }
             }
         }
