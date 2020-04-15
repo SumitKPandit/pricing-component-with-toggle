@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+$primary-color: linear-gradient(45deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+$neutrals: (
+    very-light: hsl(240, 78%, 98%),
+    light: hsl(234, 14%, 74%),
+    medium: hsl(233, 13%, 49%),
+    dark: hsl(232, 13%, 33%)
+);
+
+$base-font-size: 15px;
+
+$base-font-family: 'Montserrat', sans-serif;
+
+$base-font-weight: 700;
